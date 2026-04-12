@@ -1,0 +1,52 @@
+/* Dashboard shared styles */
+.users-panel {
+  padding: var(--space-lg);
+}
+.users-panel-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+}
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.user-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-cream);
+  transition: background var(--transition-fast);
+}
+.user-list-item:hover {
+  background: var(--bg-warm);
+}
+.user-list-name {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+.user-list-username {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  font-family: monospace;
+}
+.empty-hint {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-style: italic;
+  padding: 8px 0;
+}
+
+@media (max-width: 640px) {
+  .users-panel-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}

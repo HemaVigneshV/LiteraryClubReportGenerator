@@ -1,0 +1,107 @@
+.navbar {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.navbar-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  cursor: pointer;
+}
+.navbar-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+.navbar-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+.navbar-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  line-height: 1.2;
+}
+.navbar-subtitle {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+.navbar-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+.navbar-user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.navbar-user-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .navbar-inner { padding: 0 var(--space-md); }
+  .navbar-toggle { display: flex; }
+  .navbar-right {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-light);
+    padding: var(--space-md);
+    flex-direction: column;
+    align-items: stretch;
+    box-shadow: var(--shadow-md);
+  }
+  .navbar-right.open { display: flex; }
+  .navbar-brand-text { display: none; }
+  .navbar-logo { height: 32px; }
+}
